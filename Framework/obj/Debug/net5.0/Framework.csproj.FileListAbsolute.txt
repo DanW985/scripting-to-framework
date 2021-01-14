@@ -1,0 +1,12 @@
+C:\TAU\scripting-to-framework\Framework\bin\Debug\net5.0\Framework.deps.json
+C:\TAU\scripting-to-framework\Framework\bin\Debug\net5.0\Framework.dll
+C:\TAU\scripting-to-framework\Framework\bin\Debug\net5.0\ref\Framework.dll
+C:\TAU\scripting-to-framework\Framework\bin\Debug\net5.0\Framework.pdb
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.csprojAssemblyReference.cache
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.AssemblyInfoInputs.cache
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.AssemblyInfo.cs
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.csproj.CoreCompileInputs.cache
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.dll
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\ref\Framework.dll
+C:\TAU\scripting-to-framework\Framework\obj\Debug\net5.0\Framework.pdb
