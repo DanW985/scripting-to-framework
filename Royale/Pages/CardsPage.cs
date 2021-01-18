@@ -21,7 +21,7 @@ public class CardsPage : PageBase
         Thread.Sleep(3000);
         return this;
     }
-    public IWebElement GetCardByName(string cardName)
+    public Element GetCardByName(string cardName)
     {
 
         if(cardName.Contains(" "))
@@ -37,7 +37,7 @@ public class CardsPage : PageBase
 
 public class CardsPageMap
 {
-        public IWebElement Card(string cardName) => Driver.FindElement(By.CssSelector($"a[href*='{cardName}']"));
+        public Element Card(string name) => Driver.FindElement(By.CssSelector($"a[href*='{name}']"), $"Card: {name} ");
 }
 
 }

@@ -1,5 +1,15 @@
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\Royale.deps.json
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\Royale.dll
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\ref\Royale.dll
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\Royale.pdb
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\Framework.dll
+C:\TAU\scripting-to-framework\Royale\bin\Debug\net5.0\Framework.pdb
 C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.csprojAssemblyReference.cache
 C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.GeneratedMSBuildEditorConfig.editorconfig
 C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.AssemblyInfoInputs.cache
 C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.AssemblyInfo.cs
 C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.csproj.CoreCompileInputs.cache
+C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.csproj.CopyComplete
+C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.dll
+C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\ref\Royale.dll
+C:\TAU\scripting-to-framework\Royale\obj\Debug\net5.0\Royale.pdb

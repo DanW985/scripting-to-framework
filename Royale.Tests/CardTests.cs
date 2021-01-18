@@ -8,16 +8,24 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Royale.Pages;
+using System.Collections.Generic;
+using Framework;
 
 namespace Royale.Tests
 {
     public class CardTests
     {
+        [OneTimeSetUp]
+        public void BeforeAll()
+        {
+            FW.CreateTestResultsDirectory();
+        }
         [SetUp]
         public void BeforeEach()
         {
+            FW.SetLogger();
             Driver.Init();
-            Pages.PagesWrapper.Init();
+            PagesWrapper.Init();
             Driver.GotTo("https://statsroyale.com");
             Driver.Current.Manage().Window.Maximize();
             Thread.Sleep(6000);
@@ -31,25 +39,28 @@ namespace Royale.Tests
             Driver.Current.Quit();
         }
 
-        [Test]
-        public void Ice_Spirit_is_on_cards_page()
+        static IList<Card> apiCards = new ApiCardServiceCalls().GetAllCards();
+
+        [Test, Category("cards")]
+        [TestCaseSource("apiCards")]
+        [Parallelizable(ParallelScope.Children)]
+        public void Card_is_on_cards_page(Card card)
         {         
-                     
             
-            var iceSpirit = Pages.PagesWrapper.Cards.Goto().GetCardByName("Ice Spirit");
-            Assert.That(iceSpirit.Displayed);
+            var cardOnPage = Pages.PagesWrapper.Cards.Goto().GetCardByName(card.Name);
+            Assert.That(cardOnPage.Displayed);
         }
 
-        static string[] cardNames = { "Ice Spirit", "Mirror" };
-        [Test, Category("Cards")]
-        [TestCaseSource("cardNames")]
+        
+        [Test, Category("cards")]
+        [TestCaseSource("apiCards")]
         [Parallelizable(ParallelScope.Children)]
-        public void Card_headers_are_correct_on_card_details_page(string cardName)
+        public void Card_headers_are_correct_on_card_details_page(Card card)
         {
-            Pages.PagesWrapper.Cards.Goto().GetCardByName(cardName).Click();
+            PagesWrapper.Cards.Goto().GetCardByName(card.Name).Click();
 
-            var cardOnPage = Pages.PagesWrapper.CardDetails.GetBaseCard();
-            var card = new InMemoryCardService().GetCardByName(cardName);
+            var cardOnPage = PagesWrapper.CardDetails.GetBaseCard();
+            
 
             Assert.AreEqual(card.Name, cardOnPage.Name);
             Assert.AreEqual(card.Type, cardOnPage.Type);

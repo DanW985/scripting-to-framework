@@ -7,20 +7,22 @@ namespace Royale.Pages
 {
     public class HeaderNav
     {   
-        public readonly HeaderNavMap map;
+        public readonly HeaderNavMap Map;
 
         public HeaderNav()
         {
-            map = new HeaderNavMap();
+            Map = new HeaderNavMap();
         }
         public void GotoCardsPage()
         {
-            map.CardsTabLink.Click();
+            Map.CardsTabLink.Click();
         }
     }
 
     public class HeaderNavMap
     {
-        public IWebElement CardsTabLink => Driver.FindElement(By.CssSelector("a[href='/cards']"));
+        public Element CardsTabLink => Driver.FindElement(By.CssSelector("a[href='/cards']"), "Cards tab link");
+
+        public Element DeckBuilderLink => Driver.FindElement(By.CssSelector("a[href='/deckbuilder']"), "Deck Builder link");
     }
 }
